@@ -1,0 +1,163 @@
+
+.icon {
+    display: inline;
+    float: left;
+    padding-right: 15px;
+}
+
+.top-part{
+    padding-top: 5px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-image-source: none;
+    border-image-slice: 100%;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-bottom: none;
+}
+
+.perboxab{
+    padding-top: 10px;
+    float: right;
+    margin-right: 15px;
+    margin-bottom: -30px;
+    line-height: 28px;
+    overflow: hidden;
+}
+
+
+.bottom-part{
+    padding-top: 10px;
+}
+ em{
+    font-style: normal;
+    padding-right: 10px
+}
+
+ .bigtitle{
+     margin-bottom: 5px !important;
+     padding-left: 15px;
+ }
+.smalltitle{
+    color: #666666;
+}
+
+.pipe {
+    margin: 0 5px;
+    color: #CCC;
+}
+ul li{
+    list-style: none;
+}
+
+
+.username {
+        padding-top: 10px;
+        font-size: 30px;
+        padding-left: 10px;
+}
+
+.introduction{;
+        padding-top: 10px;
+        font-size: 20px;
+        padding-left: 10px;
+}
+
+.list-group1{
+    padding-bottom: 5px !important;
+}
+
+.list li{
+    float: left;
+    width: 300px;
+}
+
+
+
+/*edit personal*/
+
+#wp .wp {
+    width: auto;
+}
+
+.pi {
+    min-height: 500px;
+    border: 1px solid #CCC;
+    background: url("http://www.eeban.com/static/image/common/vlineb.png") repeat-y 0 0;
+    margin: 0 auto;
+    width: auto
+}
+
+.nowinfo{
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.edit {
+    padding-left: 100px;
+
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.editt {
+    border: none !important;
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+.tfm {
+    width: 100%;
+}
+table {
+    empty-cells: show;
+    border-collapse: collapse;
+}
+
+.tfm th {
+    padding-top: 9px;
+    padding-right: 5px;
+    width: 150px;
+}
+.tfm caption, .tfm th, .tfm td {
+    vertical-align: top;
+}
+caption, th {
+    text-align: left;
+    font-weight: 400;
+}
+
+.tfm caption, .tfm th, .tfm td {
+    vertical-align: top;
+    padding: 7px 0;
+}
+
+
+
+
+
+.edit-info li {
+    margin: 0 10px;
+    height: 33px;
+    border-bottom: 1px dashed #CCC;
+}
+.edit-info ul a {
+    display: block;
+    height: 33px;
+    line-height: 33px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.edit-info li.a {
+    background: #FAF6ED;
+    margin: -1px 0 0;
+    padding: 0 10px 0 9px;
+    border-top: 1px solid #CDCDCD;
+    border-bottom-style: solid;
+    background: #FFF;
+}

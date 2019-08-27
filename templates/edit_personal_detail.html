@@ -1,0 +1,236 @@
+{%  extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block head %}
+       <link rel="stylesheet" href="{{  url_for('static',filename='css/personal.css')}}">
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+{# 导航#}
+    <div class="row-fluid">
+				<div class="span12">
+					<ul class="breadcrumb">
+						<li>
+							<a href="{{ url_for('index') }}">Home Page</a>
+						</li>
+						<li>
+							<a href="{{ url_for('info',user_id=user.id) }}">{{  user.username }}</a>
+						</li>
+						<li class="active">
+							Setting Personal Page
+						</li>
+					</ul>
+                </div>
+    </div>
+
+<!-- 修改信息部分-->
+    <div class="row-fluid">
+{#        <div class="tabbable " id="tabsa" style="padding-left: 25px">#}
+{#            <ul class="nav nav-tabs" style="padding-top: 25px">#}
+{#                <li class="nav-header" style="font-size: 20px;">Settings</li>#}
+{#                <li class="active">#}
+{#                    <a href="#panel-a" data-toggle="tab" style="font-size: 15px">Change Photo</a>#}
+{#                </li>#}
+{#                <li>#}
+{#					<a class="a" href="#panel-b" data-toggle="tab">Change Information</a>#}
+{#				</li>#}
+{#            </ul>#}
+{##}
+{#                        <!--Part1-->#}
+{#						<div class="tab-content">#}
+                                <div  class="pi">
+                                    <div class="nowinfo">
+                                         <div class="icon">
+                                             <img alt="40x40" src="{{ url_for('static',filename='')}}{{ user.photo}} "  class="img-circle" width="100" height="100" />
+                                             <h4 style="text-align: center">{{ user.username }}</h4>
+                                        </div>
+
+                                    </div>
+                                    <div class="edit">
+                                        <div class="editt">
+                                            <h1 style="font-size: 30px;">Personal Information</h1>
+                                            <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
+                                                    <table class="tfm" id="profilelist" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <th>Username:</th>
+                                                        <td>
+                                                            <input name="username"  class="px" value="" tabindex="1" type="text">
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th>Photos:</th>
+                                                    <td>
+                                                        <input type=file name="photo">
+                                                         <p>If you haven't set your own avatar yet, the system will show you the default avatar, and you will need to upload a new photo as your personal avatar.</p>
+                                                    </td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th>Introduction:</th>
+                                                    <td>
+                                                        <input name="introduction"  class="px" value="" tabindex="1" type="text">
+                                                    </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                    <th>Gender:</th>
+                                                    <td>
+                                                        <select name="gender" id="gender" class="ps" tabindex="1">
+                                                         <option value="Secret" selected="selected">Secret</option>
+                                                         <option value="Male">Male</option>
+                                                            <option value="Female">Female</option>
+                                                        </select>
+                                                    </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                    <th>Age:</th>
+                                                    <td>
+                                                        <input type="number" class="px" name="age" placeholder="age">
+                                                    </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                    <th>Major:</th>
+                                                    <td>
+                                                        <select name="major" id="gender" class="ps" tabindex="1">
+                                                            <option value="Secret" selected="selected">Secret</option>
+                                                            <option value="Software Engineering">Software Engineering</option>
+                                                            <option value="Internet Of Things">Internet Of Things</option>
+                                                            <option value="Finance">Finance</option>
+                                                        </select>
+                                                    </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                    <th>Class:</th>
+                                                    <td>
+                                                        <input name="class"  class="px" value="" tabindex="1" type="text">
+                                                    </td>
+
+                                                    </tr>
+
+                                                    <tr>
+                                                    <th>Hobbies:</th>
+                                                    <td>
+                                                        <input name="hobbies"  class="px" value="" tabindex="1" type="text">
+
+                                                    </td>
+
+                                                    </tr>
+
+                                                    <tr>
+                                                    <th></th>
+                                                    <td colspan="2">
+                                                        <input name="profilesubmit" value="true" type="hidden">
+                                                        <button type="submit" name="profilesubmitbtn" id="profilesubmitbtn" value="true" class="pn pnc"><strong>Save</strong></button>
+                                                    </td>
+                                                    </tr>
+                                                    </tbody>
+                                                    </table>
+                                            </form>
+                                    </div>
+                                </div>
+                            </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{#            <div class="appl">#}
+{#                        <div class="tbn">#}
+{#                            <h2 class="mt bbda">设置</h2>#}
+{#                            <ul>#}
+{#                                <li><a href="http://www.eeban.com/home.php?mod=spacecp&amp;ac=avatar">Change Password</a></li>#}
+{#                                <li class="a"><a href="http://www.eeban.com/home.php?mod=spacecp&amp;ac=profile">Change Information</a></li>#}
+{#                                <li><a href="http://www.eeban.com/home.php?mod=spacecp&amp;ac=privacy">Change Password</a></li>#}
+{#                            </ul>#}
+{#                        </div>#}
+{#                    </div>#}
+
+{#<form class="form-horizontal" action="" method="post" enctype=multipart/form-data>#}
+{#                                    <div class="form-container">#}
+{#            <div class="form-group">#}
+{#                <label for="inputEmail3" class="control-label">Username:</label>#}
+{#                <div class="col-sm-10">#}
+{#                    <input type="text" class="form-control" name="username" placeholder="username">#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#             <div class="form-group">#}
+{#                <label for="inputEmail3" class="control-label">Gender:</label>#}
+{#                <div class="col-sm-10">#}
+{#                    <input type="text" class="form-control" name="username" placeholder="gender">#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="form-group">#}
+{#                <label for="inputPassword3" class="control-label">Age:</label>#}
+{#                <div class="col-sm-10">#}
+{#                    <input type="number" class="form-control" name="age" placeholder="age">#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="form-group">#}
+{#                <label for="inputPassword3" class="control-label">Major:</label>#}
+{#                <div class="col-sm-10">#}
+{#                    <input type="text" class="form-control" name="password1" placeholder="eg:Software Engineering">#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="form-group">#}
+{#                <label for="inputPassword3" class="control-label">Class:</label>#}
+{#                <div class="col-sm-10">#}
+{#                    <input type="text" class="form-control" name="password2" placeholder="eg:153722">#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="form-group">#}
+{#                <label for="inputPassword3" class="control-label">Hobbies:</label>#}
+{#                <div class="col-sm-10">#}
+{#                    <input type="text" class="form-control" name="password2" placeholder="eg:surfing...">#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="form-group">#}
+{#                    <button type="submit" class="btn btn-primary btn-block">Confirm</button>#}
+{#            </div>#}
+{#        </div>#}
+{#                                </form>#}
+
+{#							<div class="tab-pane active" id="panel-a">#}
+{#                                    <div class="edit">#}
+{#                                        <div class="bm bw0">#}
+{#                                            <form id="avatarform" enctype="multipart/form-data" method="post" autocomplete="off" action="" target="uploadframe">#}
+{#                                            <table class="tfm" cellspacing="0" cellpadding="0">#}
+{#                                                <caption>#}
+{#                                                    <span id="retpre" class="y xi2"></span>#}
+{#                                                    <h2 class="xs2">Present Photo</h2>#}
+{#                                                    <p>If you haven't set your own avatar yet, the system will show you the default avatar, and you will need to upload a new photo as your personal avatar.</p>#}
+{#                                                </caption>#}
+{#                                                <tbody>#}
+{#                                                    <tr>#}
+{#                                                        <td><img src="{{ url_for('static',filename='' )}}{{ user.photo }}" style="width: 100px; height: 100px"></td>#}
+{#                                                    </tr>#}
+{#                                                </tbody>#}
+{#                                            </table>#}
+{##}
+{#                                            <table class="tfm" cellspacing="0" cellpadding="0">#}
+{#                                                <caption>#}
+{#                                                    <h2 class="xs2">Setting my new photo</h2>#}
+{#                                                    <p>Please select a new photo to upload and edit.#}
+{#                                                        <br>After the avatar is saved, you may need to refresh the page (press F5) to see the latest avatar effect</p>#}
+{#                                                </caption>#}
+{#                                                <tbody><tr>#}
+{#                                                    <td>#}
+{#                                                     <div class="form-group">#}
+{#                                                        <input type=file name=file><br/>#}
+{#                                                     </div>#}
+{#                                                    </td>#}
+{#                                                    </tr>#}
+{#                                                </tbody>#}
+{#                                            </table>#}
+{#                                                <input name="formhash" value="bebb7acd" type="hidden">#}
+{#                                        </form>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#								</div>#}
